@@ -10,7 +10,7 @@ namespace Network {
         public:
 
             Client(std::string host_name, int client_socket);
-            ~Client();
+            virtual ~Client();
 
         public:
 
