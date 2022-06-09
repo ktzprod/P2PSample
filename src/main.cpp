@@ -1,4 +1,8 @@
+#include <signal.h>
+
 #include <atomic>
+#include <cstring>
+#include <functional>
 #include <iostream>
 #include <unordered_map>
 
