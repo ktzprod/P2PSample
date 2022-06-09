@@ -69,6 +69,13 @@ namespace Network {
                 on_new_client(client);
             }
 
+            for (const auto& p : _peers) {
+                auto msg = p.second->recv();
+                if (msg) {
+                    std::cout << "[RECV] message from: " << p.first << " msg: " << *msg << std::endl;
+                }
+            }
+
             std::this_thread::sleep_for(std::chrono::milliseconds(1));
         }
     }
