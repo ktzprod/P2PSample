@@ -9,7 +9,7 @@
 
 namespace Network {
 
-    class Server
+    class Server final
     {
         public:
 

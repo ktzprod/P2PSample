@@ -5,7 +5,7 @@
 
 namespace Network {
 
-    class Client
+    class Client final
     {
         public:
 
