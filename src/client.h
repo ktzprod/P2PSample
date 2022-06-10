@@ -15,6 +15,14 @@ namespace Network {
 
         public:
 
+            /**
+             * @brief Create a client instance based on the given host and port
+             *
+             * @param host_name
+             * @param port
+             *
+             * @return A Client instance if everything went fine, nullptr otherwise
+             */
             static std::unique_ptr<Client> create(const std::string& host_name, const std::string& port);
 
         public:
@@ -36,6 +44,9 @@ namespace Network {
              */
             std::optional<std::string> recv() const;
 
+            /**
+             * @return the host name of the client
+             */
             inline const std::string& host_name() { return _host_name; }
 
         private:
@@ -43,4 +54,5 @@ namespace Network {
             std::string _host_name;
             int _socket;
     };
+
 }
