@@ -19,8 +19,29 @@ namespace Network {
 
         public:
 
+            /**
+             * @brief create a connection with an other peer
+             *
+             * @param host
+             * @param port
+             *
+             * @return true if the connection is successful; false otherwise
+             */
             bool connect(const std::string& host, const std::string& port);
+
+            /**
+             * @brief send a message to the given user
+             *
+             * @param who
+             * @param msg
+             *
+             * @return true if the user exists and the message has been sent properly, false otherwise
+             */
             bool send(const std::string& who, const std::string msg);
+
+            /**
+             * @brief stop the connection
+             */
             void stop();
 
         private:
