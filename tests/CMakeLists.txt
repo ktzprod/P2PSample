@@ -12,6 +12,12 @@ project(peer-sample-tests
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(source_files
+    ../src/client.cpp
+    ../src/peer_connection.cpp
+    ../src/server.cpp
+)
+
 file(GLOB test_files *.cpp)
 
 add_executable(${PROJECT_NAME} ${source_files} ${test_files})
